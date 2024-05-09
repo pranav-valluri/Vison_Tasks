@@ -1,0 +1,16 @@
+<!-- lab1_launch.launch -->
+<launch>
+
+    <rosparam file="$(find lab1_pkg)/lab1_params.yaml" command="load"/>
+
+
+    <node name="talker" pkg="lab1_pkg" type="talker.py" output="screen">
+        <!-- Any additional parameters can be passed here -->
+    </node>
+
+
+    <node name="relay" pkg="lab1_pkg" type="relay.py" output="screen">
+
+    </node>
+</launch>
+
